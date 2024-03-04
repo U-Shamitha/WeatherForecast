@@ -1,0 +1,45 @@
+.forecast-container {
+    padding: 20px;
+}
+
+.forecast-row {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.forecast-scroll {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.forecast-item {
+    flex: 0 0 auto;
+    width: 200px;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    transition: box-shadow 0.3s ease;
+}
+
+.forecast-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25), 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-item p {
+    margin: 5px 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.forecast-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.forecast-scroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
