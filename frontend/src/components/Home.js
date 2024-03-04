@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -31,6 +31,11 @@ const Home = () => {
   const [weather, setWeather] = useState([]);
   const [error, setError] = useState('');
 
+  useEffect(()=>{
+    setWeather([]);
+    setError('');
+  },[location])
+
   const handleSearch = (e) => {
     e.preventDefault();
     console.log(location);
@@ -41,7 +46,7 @@ const Home = () => {
         setWeather(result.data);
     }).catch((e)=>{
       setError(e.message);
-      setWeather('');
+      setWeather([]);
     })
   }
 
@@ -105,12 +110,11 @@ const Home = () => {
           {error && <div><b>Error is: </b><span color='red'>{error}</span></div>}
           </Paper>
         </>
-        }
+      }
 
-        
-        <Paper elevation={3} style={paperStyle}>
-          <WeatherForecast forecast={weather} />
-        </Paper>
+      <Paper elevation={3} style={paperStyle}>
+        <WeatherForecast forecast={weather} />
+      </Paper>
     </Box>
    </Container>
     
