@@ -24,8 +24,8 @@ const Home = () => {
 }));
 
 
-  // const server = "https://weatherinfobackend.onrender.com"
-  const server = "http://localhost:5000"
+  const server = "https://weatherforecast-lya7.onrender.com"
+  // const server = "http://localhost:5000"
 
   const [location, setLocation] = useState('');
   const [weather, setWeather] = useState([]);
