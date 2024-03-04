@@ -21,7 +21,7 @@ export default function Appbar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 , fontSize:'3.5vmin', fontFamily:'sans-serif'}}>
-            Weather Info Application
+            Weather Forecast Application
           </Typography>
         </Toolbar>
       </AppBar>
